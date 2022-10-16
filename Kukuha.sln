@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32901.82
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kukuha", "Kukuha\Kukuha.csproj", "{11BAD1D1-75E6-4076-81F0-4CE2B788D6A8}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Kukuha Installer", "Kukuha Installer\Kukuha Installer.vdproj", "{32365B19-9EAB-4C03-A72E-90090A1334F4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{11BAD1D1-75E6-4076-81F0-4CE2B788D6A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{11BAD1D1-75E6-4076-81F0-4CE2B788D6A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{11BAD1D1-75E6-4076-81F0-4CE2B788D6A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{11BAD1D1-75E6-4076-81F0-4CE2B788D6A8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{32365B19-9EAB-4C03-A72E-90090A1334F4}.Debug|Any CPU.ActiveCfg = Debug
+		{32365B19-9EAB-4C03-A72E-90090A1334F4}.Release|Any CPU.ActiveCfg = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A102C143-3F3C-456A-B72C-8E25E738D014}
+	EndGlobalSection
+EndGlobal
