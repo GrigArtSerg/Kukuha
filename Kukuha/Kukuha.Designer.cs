@@ -1,6 +1,6 @@
 ﻿namespace Kukuha
 {
-    partial class Form1
+    partial class Kukuha
     {
         /// <summary>
         /// Обязательная переменная конструктора.
@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Kukuha));
             this.label1 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timer2 = new System.Windows.Forms.Timer(this.components);
-            this.testTimeBtn = new System.Windows.Forms.Button();
-            this.testRandomBtn = new System.Windows.Forms.Button();
+            this.TestButton = new System.Windows.Forms.Button();
+            this.SettingButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -57,36 +57,36 @@
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // testTimeBtn
+            // TestButton
             // 
-            this.testTimeBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.testTimeBtn.Location = new System.Drawing.Point(12, 112);
-            this.testTimeBtn.Name = "testTimeBtn";
-            this.testTimeBtn.Size = new System.Drawing.Size(218, 39);
-            this.testTimeBtn.TabIndex = 2;
-            this.testTimeBtn.Text = "Play time ►";
-            this.testTimeBtn.UseVisualStyleBackColor = true;
-            this.testTimeBtn.Click += new System.EventHandler(this.testTimeBtn_Click_1);
+            this.TestButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.TestButton.Location = new System.Drawing.Point(13, 100);
+            this.TestButton.Name = "TestButton";
+            this.TestButton.Size = new System.Drawing.Size(100, 39);
+            this.TestButton.TabIndex = 4;
+            this.TestButton.Text = "Test";
+            this.TestButton.UseVisualStyleBackColor = true;
+            this.TestButton.Click += new System.EventHandler(this.TestButton_Click);
             // 
-            // testRandomBtn
+            // SettingButton
             // 
-            this.testRandomBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.testRandomBtn.Location = new System.Drawing.Point(12, 157);
-            this.testRandomBtn.Name = "testRandomBtn";
-            this.testRandomBtn.Size = new System.Drawing.Size(218, 39);
-            this.testRandomBtn.TabIndex = 3;
-            this.testRandomBtn.Text = "Play random ►";
-            this.testRandomBtn.UseVisualStyleBackColor = true;
-            this.testRandomBtn.Click += new System.EventHandler(this.testRandomBtn_Click_1);
+            this.SettingButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.SettingButton.Location = new System.Drawing.Point(130, 100);
+            this.SettingButton.Name = "SettingButton";
+            this.SettingButton.Size = new System.Drawing.Size(100, 39);
+            this.SettingButton.TabIndex = 5;
+            this.SettingButton.Text = "Settings ";
+            this.SettingButton.UseVisualStyleBackColor = true;
+            this.SettingButton.Click += new System.EventHandler(this.SettingButton_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ClientSize = new System.Drawing.Size(241, 220);
-            this.Controls.Add(this.testRandomBtn);
-            this.Controls.Add(this.testTimeBtn);
+            this.ClientSize = new System.Drawing.Size(244, 161);
+            this.Controls.Add(this.SettingButton);
+            this.Controls.Add(this.TestButton);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -100,11 +100,11 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
+        public System.Windows.Forms.Label label1;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Timer timer2;
-        private System.Windows.Forms.Button testTimeBtn;
-        private System.Windows.Forms.Button testRandomBtn;
+        private System.Windows.Forms.Button TestButton;
+        private System.Windows.Forms.Button SettingButton;
     }
 }
 

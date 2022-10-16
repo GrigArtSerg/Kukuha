@@ -7,7 +7,7 @@ using System.IO;
 
 namespace Kukuha
 {
-    public partial class Form1 : Form
+    public partial class Kukuha : Form
     {
         //путь к саундам
         string timeMainPath = Directory.GetCurrentDirectory() + @"\TimeSounds\sp"; 
@@ -55,7 +55,7 @@ namespace Kukuha
         }
 
         //Воспроизводим время
-        void playTheTime(string hoursNow)
+        public void playTheTime(string hoursNow)
         {
             
             string path = timeMainPath + hoursNow + ".wav";
@@ -82,7 +82,7 @@ namespace Kukuha
         }
 
         //Добавляем немного рандома
-        void playTheRandomAction() /*actionNow Надо юзать как ориентир для фраз или нахер?*/
+        public void playTheRandomAction() /*actionNow Надо юзать как ориентир для фраз или нахер?*/
         {
             int filesNumber = System.IO.Directory.GetFiles(randomMainPath.Substring(0, randomMainPath.Length - 3)).Length; // количество файлов в папке. путь минус последние три символа - путь к папке
 
@@ -98,27 +98,24 @@ namespace Kukuha
 
         }
 
-        public Form1()
+        public Kukuha()
         {
             InitializeComponent();
         }
 
         #region Кнопачке
-        private void testTimeBtn_Click_1(object sender, EventArgs e)
+        private void TestButton_Click(object sender, EventArgs e)
         {
-            string tempText = label1.Text;
-
-            tempText = tempText.Substring(0, tempText.Length - 3);
-
-            playTheTime(tempText);
-
+            Test Test = new Test();
+            Test.Owner = this;
+            Test.ShowDialog();
         }
 
-
-        private void testRandomBtn_Click_1(object sender, EventArgs e)
+        private void SettingButton_Click(object sender, EventArgs e)
         {
-
-            playTheRandomAction();
+            Settings Settings = new Settings();
+            
+            Settings.ShowDialog();
         }
         #endregion
     }

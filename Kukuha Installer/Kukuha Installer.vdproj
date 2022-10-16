@@ -1006,17 +1006,6 @@
                 {
                 }
             }
-            "{1525181F-901A-416C-8A58-119130FE478E}:_9BA7F026EE304150BE9D67FA7825D980"
-            {
-            "Name" = "8:#1928"
-            "AlwaysCreate" = "11:FALSE"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Property" = "8:StartupFolder"
-                "Folders"
-                {
-                }
-            }
             "{3C67513D-01DD-4637-8A68-80971EB9504F}:_D706E141832E43A4A39ED73040FCA950"
             {
             "DefaultLocation" = "8:[ProgramFilesFolder][Manufacturer]\\[ProductName]"
@@ -1034,6 +1023,17 @@
                     "Condition" = "8:"
                     "Transitive" = "11:FALSE"
                     "Property" = "8:_D20490B2600D454D8CEE6F23FDF5FC44"
+                        "Folders"
+                        {
+                        }
+                    }
+                    "{9EF0B969-E518-4E46-987F-47570745A589}:_509F806A4B4C4E1C9D0A90597890DDE3"
+                    {
+                    "Name" = "8:Source Files"
+                    "AlwaysCreate" = "11:FALSE"
+                    "Condition" = "8:"
+                    "Transitive" = "11:FALSE"
+                    "Property" = "8:_6AC9B070139646DBB98FDCEA9854A618"
                         "Folders"
                         {
                         }
@@ -1060,7 +1060,7 @@
             "Property" = "8:ProgramMenuFolder"
                 "Folders"
                 {
-                    "{9EF0B969-E518-4E46-987F-47570745A589}:_E6FB758B7A8C478689ECA6BC6586A9C9"
+                    "{9EF0B969-E518-4E46-987F-47570745A589}:_7D08D033A86A46E9A8A2009714E3CAC3"
                     {
                     "Name" = "8:App"
                     "AlwaysCreate" = "11:FALSE"
@@ -1090,7 +1090,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Kukuha Installer"
         "ProductCode" = "8:{692C6646-F590-4F5C-963A-BA8D7BFDD290}"
-        "PackageCode" = "8:{332CC477-D000-4CB8-8FB8-F93E114ED074}"
+        "PackageCode" = "8:{7780729A-5084-488B-85AE-40EBFCD0A3B3}"
         "UpgradeCode" = "8:{1772301F-0F0F-47A7-9EE1-0778F8A4D8BB}"
         "AspNetVersion" = "8:2.0.50727.0"
         "RestartWWWService" = "11:FALSE"
@@ -1210,20 +1210,6 @@
         }
         "Shortcut"
         {
-            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_48A7A0C759934C9EA9C8073AA402FDC5"
-            {
-            "Name" = "8:Kukuha"
-            "Arguments" = "8:"
-            "Description" = "8:"
-            "ShowCmd" = "3:1"
-            "IconIndex" = "3:0"
-            "Transitive" = "11:FALSE"
-            "Target" = "8:_C907D14B61AF44CDADD47B2A85DC4114"
-            "Folder" = "8:_9BA7F026EE304150BE9D67FA7825D980"
-            "WorkingFolder" = "8:_D706E141832E43A4A39ED73040FCA950"
-            "Icon" = "8:"
-            "Feature" = "8:"
-            }
             "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_9058AE0A3C6C423E902EF39DF3F189D9"
             {
             "Name" = "8:Kukuha"
@@ -1233,7 +1219,7 @@
             "IconIndex" = "3:0"
             "Transitive" = "11:FALSE"
             "Target" = "8:_C907D14B61AF44CDADD47B2A85DC4114"
-            "Folder" = "8:_E6FB758B7A8C478689ECA6BC6586A9C9"
+            "Folder" = "8:_7D08D033A86A46E9A8A2009714E3CAC3"
             "WorkingFolder" = "8:_D706E141832E43A4A39ED73040FCA950"
             "Icon" = "8:"
             "Feature" = "8:"
@@ -1651,6 +1637,34 @@
         }
         "ProjectOutput"
         {
+            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_252104A7BA6342FFB7A9BF4C163A3045"
+            {
+            "SourcePath" = "8:"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_509F806A4B4C4E1C9D0A90597890DDE3"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            "ProjectOutputGroupRegister" = "3:1"
+            "OutputConfiguration" = "8:"
+            "OutputGroupCanonicalName" = "8:SourceFiles"
+            "OutputProjectGuid" = "8:{11BAD1D1-75E6-4076-81F0-4CE2B788D6A8}"
+            "ShowKeyOutput" = "11:TRUE"
+                "ExcludeFilters"
+                {
+                }
+            }
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_C907D14B61AF44CDADD47B2A85DC4114"
             {
             "SourcePath" = "8:..\\Kukuha\\obj\\Release\\Kukuha.exe"
