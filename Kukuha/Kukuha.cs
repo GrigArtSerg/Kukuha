@@ -10,8 +10,8 @@ namespace Kukuha
     public partial class Kukuha : Form
     {
         //путь к саундам
-        string timeMainPath = Directory.GetCurrentDirectory() + @"\TimeSounds\sp"; 
-        string randomMainPath = Directory.GetCurrentDirectory() + @"\RandomSounds\sp"; 
+        public readonly string timeMainPath = Directory.GetCurrentDirectory() + @"\TimeSounds\sp";
+        public readonly string randomMainPath = Directory.GetCurrentDirectory() + @"\RandomSounds\sp"; 
 
         //таймер типо
         Timer timer01 = new Timer();
@@ -27,11 +27,9 @@ namespace Kukuha
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
-            timer01.Interval = 1000;
+            timer01.Interval = 60*1000;
             timer01.Tick += new EventHandler(timer1_Tick);
             timer01.Start();
-
         }
 
         //Таймер по КД раз в секунду перерисовывает текст
@@ -51,7 +49,6 @@ namespace Kukuha
             {
                 playTheRandomAction();
             }
-
         }
 
         //Воспроизводим время
@@ -101,6 +98,8 @@ namespace Kukuha
         public Kukuha()
         {
             InitializeComponent();
+
+            label1.Text = DateTime.Now.Hour.ToString("00") + ":" + DateTime.Now.Minute.ToString("00");
         }
 
         #region Кнопачке
@@ -114,7 +113,7 @@ namespace Kukuha
         private void SettingButton_Click(object sender, EventArgs e)
         {
             Settings Settings = new Settings();
-            
+            Settings.Owner = this;
             Settings.ShowDialog();
         }
         #endregion

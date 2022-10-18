@@ -21,7 +21,19 @@ namespace Kukuha
 
         private void AddPhrase_Click(object sender, EventArgs e)
         {
+            Kukuha Main = this.Owner as Kukuha;
 
+            OpenFileDialog AddSound = new OpenFileDialog();
+            AddSound.Filter = "Audio files(*.mp3, *.wav, *.aac, *.flac, *.wav, *.ogg)|*.mp3;*.wav;*.aac;*.flac;*.wav;*.ogg|All files(*.*)|*.*";
+            
+            if (AddSound.ShowDialog() == DialogResult.Cancel)
+                return;
+        
+            int filesNumber = System.IO.Directory.GetFiles(Main.randomMainPath.Substring(0, Main.randomMainPath.Length - 3)).Length; // количество файлов в папке. путь минус последние три символа - путь к папке
+            string path = Main.randomMainPath + "d" + filesNumber.ToString("00") + Path.GetExtension(AddSound.FileName);
+            System.IO.File.Copy(AddSound.FileName, path);
+
+            AddSound.RestoreDirectory = true;
         }
 
         private void IsAutoRun_CheckedChanged(object sender, EventArgs e)
