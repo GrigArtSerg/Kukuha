@@ -40,9 +40,9 @@ namespace Kukuha
             this.testRandomBtn.Name = "testRandomBtn";
             this.testRandomBtn.Size = new System.Drawing.Size(218, 39);
             this.testRandomBtn.TabIndex = 5;
-            this.testRandomBtn.Text = "Play random ►";
+            this.testRandomBtn.Text = "► Фраза";
             this.testRandomBtn.UseVisualStyleBackColor = true;
-            this.testRandomBtn.Click += new System.EventHandler(this.testRandomBtn_Click);
+            this.testRandomBtn.Click += new System.EventHandler(this.TestRandomBtn_Click);
             // 
             // testTimeBtn
             // 
@@ -51,21 +51,21 @@ namespace Kukuha
             this.testTimeBtn.Name = "testTimeBtn";
             this.testTimeBtn.Size = new System.Drawing.Size(218, 39);
             this.testTimeBtn.TabIndex = 4;
-            this.testTimeBtn.Text = "Play time ►";
+            this.testTimeBtn.Text = "► Время";
             this.testTimeBtn.UseVisualStyleBackColor = true;
-            this.testTimeBtn.Click += new System.EventHandler(this.testTimeBtn_Click);
+            this.testTimeBtn.Click += new System.EventHandler(this.TestTimeBtn_Click);
             // 
             // Test
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ClientSize = new System.Drawing.Size(244, 221);
+            this.ClientSize = new System.Drawing.Size(244, 161);
             this.Controls.Add(this.testRandomBtn);
             this.Controls.Add(this.testTimeBtn);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Test";
-            this.Text = "Kukuha Test";
+            this.Text = "Kukuha Tests";
             this.ResumeLayout(false);
 
         }

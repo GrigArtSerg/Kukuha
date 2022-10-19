@@ -123,6 +123,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_81005559435145079840644892AE93D3"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_862E33EBBB574C54BE2CC4DC1CCEBDCD"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -226,13 +232,13 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_12CCEF1B33E183CD1B832E6380846246"
+        "OwnerKey" = "8:_C907D14B61AF44CDADD47B2A85DC4114"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_C907D14B61AF44CDADD47B2A85DC4114"
+        "OwnerKey" = "8:_12CCEF1B33E183CD1B832E6380846246"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -253,6 +259,22 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.7.2"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.7.2 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.7.2"
+                    }
+                }
+            }
         }
         "Release"
         {
@@ -269,6 +291,22 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.7.2"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.7.2 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.7.2"
+                    }
+                }
+            }
         }
     }
     "Deployable"
@@ -669,6 +707,26 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_81005559435145079840644892AE93D3"
+            {
+            "SourcePath" = "8:..\\Icon.ico"
+            "TargetName" = "8:Icon.ico"
+            "Tag" = "8:"
+            "Folder" = "8:_D706E141832E43A4A39ED73040FCA950"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_862E33EBBB574C54BE2CC4DC1CCEBDCD"
             {
             "SourcePath" = "8:..\\Kukuha\\bin\\Debug\\TimeSounds\\sp06.wav"
@@ -1027,17 +1085,6 @@
                         {
                         }
                     }
-                    "{9EF0B969-E518-4E46-987F-47570745A589}:_509F806A4B4C4E1C9D0A90597890DDE3"
-                    {
-                    "Name" = "8:Source Files"
-                    "AlwaysCreate" = "11:FALSE"
-                    "Condition" = "8:"
-                    "Transitive" = "11:FALSE"
-                    "Property" = "8:_6AC9B070139646DBB98FDCEA9854A618"
-                        "Folders"
-                        {
-                        }
-                    }
                     "{9EF0B969-E518-4E46-987F-47570745A589}:_B028FC0D16FA499989BF5BFBD86F7A23"
                     {
                     "Name" = "8:TimeSounds"
@@ -1089,21 +1136,21 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Kukuha Installer"
-        "ProductCode" = "8:{692C6646-F590-4F5C-963A-BA8D7BFDD290}"
-        "PackageCode" = "8:{7780729A-5084-488B-85AE-40EBFCD0A3B3}"
+        "ProductCode" = "8:{4E16B794-F1D5-4798-964D-D3CCE4087408}"
+        "PackageCode" = "8:{1BD56E06-5154-401E-A69C-74314F3CF3BD}"
         "UpgradeCode" = "8:{1772301F-0F0F-47A7-9EE1-0778F8A4D8BB}"
         "AspNetVersion" = "8:2.0.50727.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:FALSE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:FALSE"
-        "ProductVersion" = "8:1.0.0"
+        "ProductVersion" = "8:1.3.0"
         "Manufacturer" = "8:Default Company Name"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
         "Title" = "8:Kukuha Installer"
         "Subject" = "8:"
-        "ARPCONTACT" = "8:Default Company Name"
+        "ARPCONTACT" = "8:EL COMENTANTE & Agept Of Misterss Luck"
         "Keywords" = "8:"
         "ARPCOMMENTS" = "8:"
         "ARPURLINFOABOUT" = "8:"
@@ -1221,21 +1268,7 @@
             "Target" = "8:_C907D14B61AF44CDADD47B2A85DC4114"
             "Folder" = "8:_7D08D033A86A46E9A8A2009714E3CAC3"
             "WorkingFolder" = "8:_D706E141832E43A4A39ED73040FCA950"
-            "Icon" = "8:"
-            "Feature" = "8:"
-            }
-            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_A1B71920E96D4DABADF0A504CE720CE2"
-            {
-            "Name" = "8:Kukuha"
-            "Arguments" = "8:"
-            "Description" = "8:"
-            "ShowCmd" = "3:1"
-            "IconIndex" = "3:0"
-            "Transitive" = "11:FALSE"
-            "Target" = "8:_C907D14B61AF44CDADD47B2A85DC4114"
-            "Folder" = "8:_52C79DFDE11A40B9AE98EF793E0D7377"
-            "WorkingFolder" = "8:_D706E141832E43A4A39ED73040FCA950"
-            "Icon" = "8:"
+            "Icon" = "8:_81005559435145079840644892AE93D3"
             "Feature" = "8:"
             }
         }
@@ -1637,34 +1670,6 @@
         }
         "ProjectOutput"
         {
-            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_252104A7BA6342FFB7A9BF4C163A3045"
-            {
-            "SourcePath" = "8:"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_509F806A4B4C4E1C9D0A90597890DDE3"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            "ProjectOutputGroupRegister" = "3:1"
-            "OutputConfiguration" = "8:"
-            "OutputGroupCanonicalName" = "8:SourceFiles"
-            "OutputProjectGuid" = "8:{11BAD1D1-75E6-4076-81F0-4CE2B788D6A8}"
-            "ShowKeyOutput" = "11:TRUE"
-                "ExcludeFilters"
-                {
-                }
-            }
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_C907D14B61AF44CDADD47B2A85DC4114"
             {
             "SourcePath" = "8:..\\Kukuha\\obj\\Release\\Kukuha.exe"

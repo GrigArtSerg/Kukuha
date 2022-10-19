@@ -1,12 +1,6 @@
 ﻿using System;
 using System.IO;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using IWshRuntimeLibrary;
 
@@ -14,9 +8,19 @@ namespace Kukuha
 {
     public partial class Settings : Form
     {
+
+        string AutoRunPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), @"Microsoft\Windows\Start Menu\Programs\Startup\Kukuha.lnk");
+
         public Settings()
         {
             InitializeComponent();
+
+            this.Icon = Icon.ExtractAssociatedIcon((Directory.GetCurrentDirectory() + @"\icon.ico"));
+
+            if (System.IO.File.Exists(AutoRunPath))
+            {
+                IsAutoRun.Checked = true;
+            }
         }
 
         private void AddPhrase_Click(object sender, EventArgs e)
@@ -24,6 +28,8 @@ namespace Kukuha
             Kukuha Main = this.Owner as Kukuha;
 
             OpenFileDialog AddSound = new OpenFileDialog();
+            AddSound.Multiselect = false;
+            AddSound.Title = "Добавление фраз для уведомлений";
             AddSound.Filter = "Audio files(*.mp3, *.wav, *.aac, *.flac, *.wav, *.ogg)|*.mp3;*.wav;*.aac;*.flac;*.wav;*.ogg|All files(*.*)|*.*";
             
             if (AddSound.ShowDialog() == DialogResult.Cancel)
@@ -38,8 +44,6 @@ namespace Kukuha
 
         private void IsAutoRun_CheckedChanged(object sender, EventArgs e)
         {
-            string AutoRunPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), @"Microsoft\Windows\Start Menu\Programs\Startup\Kukuha.lnk");
-
             if (IsAutoRun.Checked == true)
             {
                 WshShell Shell = new WshShell();
@@ -64,6 +68,18 @@ namespace Kukuha
                     System.IO.File.Delete(AutoRunPath);
                 }
             }
+        }
+
+        /// <summary>
+        /// Настроить отправку сообщений о предложения/проблемах в работе
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void ReportOrSuggestion_Click(object sender, EventArgs e)
+        {
+            FormRepSug FormRepSug = new FormRepSug();
+            FormRepSug.Owner = this;
+            FormRepSug.ShowDialog();
         }
     }
 }

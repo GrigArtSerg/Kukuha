@@ -31,6 +31,7 @@ namespace Kukuha
         {
             this.IsAutoRun = new System.Windows.Forms.CheckBox();
             this.AddPhrase = new System.Windows.Forms.Button();
+            this.ReportOrSuggestion = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // IsAutoRun
@@ -40,9 +41,9 @@ namespace Kukuha
             this.IsAutoRun.ForeColor = System.Drawing.Color.White;
             this.IsAutoRun.Location = new System.Drawing.Point(13, 13);
             this.IsAutoRun.Name = "IsAutoRun";
-            this.IsAutoRun.Size = new System.Drawing.Size(114, 33);
+            this.IsAutoRun.Size = new System.Drawing.Size(186, 33);
             this.IsAutoRun.TabIndex = 0;
-            this.IsAutoRun.Text = "Autorun";
+            this.IsAutoRun.Text = "Автозагрузка";
             this.IsAutoRun.UseVisualStyleBackColor = true;
             this.IsAutoRun.CheckedChanged += new System.EventHandler(this.IsAutoRun_CheckedChanged);
             // 
@@ -51,18 +52,31 @@ namespace Kukuha
             this.AddPhrase.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.AddPhrase.Location = new System.Drawing.Point(12, 52);
             this.AddPhrase.Name = "AddPhrase";
-            this.AddPhrase.Size = new System.Drawing.Size(218, 39);
+            this.AddPhrase.Size = new System.Drawing.Size(271, 39);
             this.AddPhrase.TabIndex = 5;
-            this.AddPhrase.Text = "Add Phrase";
+            this.AddPhrase.Text = "Добавить фразу";
             this.AddPhrase.UseVisualStyleBackColor = true;
             this.AddPhrase.Click += new System.EventHandler(this.AddPhrase_Click);
+            // 
+            // ReportOrSuggestion
+            // 
+            this.ReportOrSuggestion.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.ReportOrSuggestion.Location = new System.Drawing.Point(12, 97);
+            this.ReportOrSuggestion.Name = "ReportOrSuggestion";
+            this.ReportOrSuggestion.Size = new System.Drawing.Size(271, 90);
+            this.ReportOrSuggestion.TabIndex = 6;
+            this.ReportOrSuggestion.Text = "Сообщить о проблеме Предложить улучшения";
+            this.ReportOrSuggestion.UseVisualStyleBackColor = true;
+            this.ReportOrSuggestion.Visible = false;
+            this.ReportOrSuggestion.Click += new System.EventHandler(this.ReportOrSuggestion_Click);
             // 
             // Settings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ClientSize = new System.Drawing.Size(244, 221);
+            this.ClientSize = new System.Drawing.Size(295, 221);
+            this.Controls.Add(this.ReportOrSuggestion);
             this.Controls.Add(this.AddPhrase);
             this.Controls.Add(this.IsAutoRun);
             this.Name = "Settings";
@@ -76,5 +90,6 @@ namespace Kukuha
 
         private System.Windows.Forms.CheckBox IsAutoRun;
         private System.Windows.Forms.Button AddPhrase;
+        private System.Windows.Forms.Button ReportOrSuggestion;
     }
 }

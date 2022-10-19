@@ -1,12 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace Kukuha
 {
@@ -15,22 +10,24 @@ namespace Kukuha
         public Test()
         {
             InitializeComponent();
+
+            this.Icon = Icon.ExtractAssociatedIcon((Directory.GetCurrentDirectory() + @"\icon.ico"));
         }
 
         #region Кнопачке
-        private void testTimeBtn_Click(object sender, EventArgs e)
+        private void TestTimeBtn_Click(object sender, EventArgs e)
         {
             Kukuha Main = this.Owner as Kukuha;
             string tempText = Main.label1.Text;
 
             tempText = tempText.Substring(0, tempText.Length - 3);
-            Main.playTheTime(tempText);
+            Main.PlayTheTime(tempText);
         }
 
-        private void testRandomBtn_Click(object sender, EventArgs e)
+        private void TestRandomBtn_Click(object sender, EventArgs e)
         {
             Kukuha Main = this.Owner as Kukuha;
-            Main.playTheRandomAction();
+            Main.PlayTheRandomAction();
         }
         #endregion
     }
