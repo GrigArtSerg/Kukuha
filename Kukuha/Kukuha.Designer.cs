@@ -29,11 +29,13 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Kukuha));
             this.label1 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.TestButton = new System.Windows.Forms.Button();
             this.SettingButton = new System.Windows.Forms.Button();
+            this.Version = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -78,18 +80,31 @@
             this.SettingButton.UseVisualStyleBackColor = true;
             this.SettingButton.Click += new System.EventHandler(this.SettingButton_Click);
             // 
+            // Version
+            // 
+            this.Version.AutoSize = true;
+            this.Version.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            this.Version.ForeColor = System.Drawing.Color.White;
+            this.Version.Location = new System.Drawing.Point(12, 142);
+            this.Version.Name = "Version";
+            this.Version.Size = new System.Drawing.Size(0, 13);
+            this.Version.TabIndex = 6;
+            // 
             // Kukuha
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ClientSize = new System.Drawing.Size(244, 161);
+            this.ClientSize = new System.Drawing.Size(244, 159);
+            this.Controls.Add(this.Version);
             this.Controls.Add(this.SettingButton);
             this.Controls.Add(this.TestButton);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Kukuha";
             this.Text = "Kukuha";
+            this.WindowState = System.Windows.Forms.FormWindowState.Minimized;
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -103,6 +118,7 @@
         private System.Windows.Forms.Timer timer2;
         private System.Windows.Forms.Button TestButton;
         private System.Windows.Forms.Button SettingButton;
+        private System.Windows.Forms.Label Version;
     }
 }
 

@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Net;
+using System.Threading;
 using System.Drawing;
 using System.Windows.Forms;
 using System.Media;
@@ -10,13 +12,23 @@ namespace Kukuha
 {
     public partial class Kukuha : Form
     {
+        /// <summary>
+        /// номер версии
+        /// </summary>
+        Version version = new Version("1.6.0");
+
+        /// <summary>
+        /// путь к версии
+        /// </summary>
+        string VersionPath = "https://pastebin.com/abrDfmwL";
+
         //путь к саундам
         public readonly string timeMainPath = Directory.GetCurrentDirectory() + @"\TimeSounds\sp";
         public readonly string randomMainPath = Directory.GetCurrentDirectory() + @"\RandomSounds\sp";
 
         //таймер типо
-        readonly Timer timer01 = new Timer();
-
+        readonly System.Windows.Forms.Timer timer01 = new System.Windows.Forms.Timer();
+        
         //Рандомазер
         readonly Random rnd = new Random();
 
@@ -26,16 +38,37 @@ namespace Kukuha
         //звук таймера
         readonly SoundPlayer sayTime = new SoundPlayer();
 
+        //для обновления
+        WebClient Client = new WebClient();
+
         private void Form1_Load(object sender, EventArgs e)
         {
-            timer01.Interval = 60*1000;
+            UpdateCheck();
+
+            timer01.Interval = 1000;
             timer01.Tick += new EventHandler(Timer1_Tick);
             timer01.Start();
+
+            Version.Text = "v" + version.ToString();
+        }
+
+        private void UpdateCheck()
+        {
+            if (!Client.DownloadString(VersionPath).Contains(version.ToString()))
+            {
+                Button UpdateButton = new Button();
+                Updation Upd = new Updation();
+                Upd.ShowDialog();
+            }
         }
 
         //Таймер по КД раз в секунду перерисовывает текст
         private void Timer1_Tick(object sender, EventArgs e)
         {
+            if (DateTime.Now.Second.ToString("00") == "00")
+                timer01.Interval = 60 * 1000;
+            else timer01.Interval = 1000;
+
             //Записываем время
             label1.Text = DateTime.Now.Hour.ToString("00") + ":" + DateTime.Now.Minute.ToString("00");
 
@@ -43,11 +76,8 @@ namespace Kukuha
             if (DateTime.Now.Minute.ToString("00") == "00" && DateTime.Now.Second.ToString("00") == "00")
             {
                 PlayTheTime(DateTime.Now.Hour.ToString("00"));
-            }
-
-            //Добавочная рандомная фигня (минуты 00, секунды 03)
-            if (DateTime.Now.Minute.ToString("00") == "00" && DateTime.Now.Second.ToString("00") == "03")
-            {
+                //Добавочная рандомная фигня (минуты 00, секунды 03)
+                Thread.Sleep(3000);
                 PlayTheRandomAction();
             }
         }

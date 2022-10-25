@@ -73,6 +73,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Updation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Updation.Designer.cs">
+      <DependentUpon>Updation.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormRepSug.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -99,6 +105,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Updation.resx">
+      <DependentUpon>Updation.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormRepSug.resx">
       <DependentUpon>FormRepSug.cs</DependentUpon>
     </EmbeddedResource>

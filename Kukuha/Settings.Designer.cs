@@ -65,7 +65,7 @@ namespace Kukuha
             this.ReportOrSuggestion.Name = "ReportOrSuggestion";
             this.ReportOrSuggestion.Size = new System.Drawing.Size(271, 90);
             this.ReportOrSuggestion.TabIndex = 6;
-            this.ReportOrSuggestion.Text = "Сообщить о проблеме Предложить улучшения";
+            this.ReportOrSuggestion.Text = "Сообщить о проблеме Предложить улучшения (пока не работает)";
             this.ReportOrSuggestion.UseVisualStyleBackColor = true;
             this.ReportOrSuggestion.Visible = false;
             this.ReportOrSuggestion.Click += new System.EventHandler(this.ReportOrSuggestion_Click);
@@ -79,6 +79,7 @@ namespace Kukuha
             this.Controls.Add(this.ReportOrSuggestion);
             this.Controls.Add(this.AddPhrase);
             this.Controls.Add(this.IsAutoRun);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Settings";
             this.Text = "Kukuha Settings";
             this.ResumeLayout(false);
