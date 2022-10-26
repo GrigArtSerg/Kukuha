@@ -15,12 +15,28 @@ namespace Kukuha
         /// <summary>
         /// номер версии
         /// </summary>
-        Version version = new Version("1.6.0");
+        readonly Version version = new Version("1.6.2");
+
+        public Version GetVersion
+        {
+            get
+            {
+                return version;
+            }
+        }
 
         /// <summary>
         /// путь к версии
         /// </summary>
-        string VersionPath = "https://pastebin.com/abrDfmwL";
+        readonly string VersionPath = "https://pastebin.com/abrDfmwL";
+
+        public string GetVersionPath
+        {
+            get
+            {
+                return VersionPath;
+            }
+        }
 
         //путь к саундам
         public readonly string timeMainPath = Directory.GetCurrentDirectory() + @"\TimeSounds\sp";
@@ -48,15 +64,17 @@ namespace Kukuha
             timer01.Interval = 1000;
             timer01.Tick += new EventHandler(Timer1_Tick);
             timer01.Start();
-
+            
             Version.Text = "v" + version.ToString();
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
         private void UpdateCheck()
         {
             if (!Client.DownloadString(VersionPath).Contains(version.ToString()))
             {
-                Button UpdateButton = new Button();
                 Updation Upd = new Updation();
                 Upd.ShowDialog();
             }

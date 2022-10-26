@@ -28,11 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Kukuha));
             this.label1 = new System.Windows.Forms.Label();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.TestButton = new System.Windows.Forms.Button();
             this.SettingButton = new System.Windows.Forms.Button();
             this.Version = new System.Windows.Forms.Label();
@@ -53,10 +50,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "00:00";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // timer1
-            // 
-            this.timer1.Tick += new System.EventHandler(this.Timer1_Tick);
             // 
             // TestButton
             // 
@@ -87,8 +80,9 @@
             this.Version.ForeColor = System.Drawing.Color.White;
             this.Version.Location = new System.Drawing.Point(12, 142);
             this.Version.Name = "Version";
-            this.Version.Size = new System.Drawing.Size(0, 13);
+            this.Version.Size = new System.Drawing.Size(13, 13);
             this.Version.TabIndex = 6;
+            this.Version.Text = "v";
             // 
             // Kukuha
             // 
@@ -114,8 +108,6 @@
         #endregion
 
         public System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Timer timer1;
-        private System.Windows.Forms.Timer timer2;
         private System.Windows.Forms.Button TestButton;
         private System.Windows.Forms.Button SettingButton;
         private System.Windows.Forms.Label Version;

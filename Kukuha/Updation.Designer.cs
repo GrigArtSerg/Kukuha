@@ -38,21 +38,21 @@ namespace Kukuha
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(13, 13);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(208, 20);
+            this.label1.Size = new System.Drawing.Size(250, 24);
             this.label1.TabIndex = 0;
             this.label1.Text = "Обнаружена новая версия";
             // 
             // OpenUpdate
             // 
-            this.OpenUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.OpenUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.OpenUpdate.ForeColor = System.Drawing.SystemColors.ControlText;
             this.OpenUpdate.Location = new System.Drawing.Point(12, 36);
             this.OpenUpdate.Name = "OpenUpdate";
-            this.OpenUpdate.Size = new System.Drawing.Size(220, 39);
+            this.OpenUpdate.Size = new System.Drawing.Size(247, 39);
             this.OpenUpdate.TabIndex = 1;
             this.OpenUpdate.Text = "Скачать обновление";
             this.OpenUpdate.UseVisualStyleBackColor = true;
@@ -60,11 +60,11 @@ namespace Kukuha
             // 
             // CloseUpdate
             // 
-            this.CloseUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.CloseUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.CloseUpdate.ForeColor = System.Drawing.SystemColors.ControlText;
             this.CloseUpdate.Location = new System.Drawing.Point(12, 81);
             this.CloseUpdate.Name = "CloseUpdate";
-            this.CloseUpdate.Size = new System.Drawing.Size(220, 39);
+            this.CloseUpdate.Size = new System.Drawing.Size(247, 39);
             this.CloseUpdate.TabIndex = 2;
             this.CloseUpdate.Text = "Пропустить обновление";
             this.CloseUpdate.UseVisualStyleBackColor = true;
@@ -75,7 +75,7 @@ namespace Kukuha
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ClientSize = new System.Drawing.Size(244, 159);
+            this.ClientSize = new System.Drawing.Size(271, 137);
             this.Controls.Add(this.CloseUpdate);
             this.Controls.Add(this.OpenUpdate);
             this.Controls.Add(this.label1);

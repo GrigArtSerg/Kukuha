@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kukuha", "Kukuha\Kukuha.csp
 EndProject
 Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Kukuha Installer", "Kukuha Installer\Kukuha Installer.vdproj", "{32365B19-9EAB-4C03-A72E-90090A1334F4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KukuhaUpdater", "KukuhaUpdater\KukuhaUpdater.csproj", "{4A17D03F-026E-4740-8486-EDE07B012698}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,6 +21,10 @@ Global
 		{11BAD1D1-75E6-4076-81F0-4CE2B788D6A8}.Release|Any CPU.Build.0 = Release|Any CPU
 		{32365B19-9EAB-4C03-A72E-90090A1334F4}.Debug|Any CPU.ActiveCfg = Debug
 		{32365B19-9EAB-4C03-A72E-90090A1334F4}.Release|Any CPU.ActiveCfg = Release
+		{4A17D03F-026E-4740-8486-EDE07B012698}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A17D03F-026E-4740-8486-EDE07B012698}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A17D03F-026E-4740-8486-EDE07B012698}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A17D03F-026E-4740-8486-EDE07B012698}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

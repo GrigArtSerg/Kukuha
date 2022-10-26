@@ -77,9 +77,11 @@ namespace Kukuha
         /// <param name="e"></param>
         private void ReportOrSuggestion_Click(object sender, EventArgs e)
         {
+            /*
             FormRepSug FormRepSug = new FormRepSug();
             FormRepSug.Owner = this;
             FormRepSug.ShowDialog();
+            */
         }
     }
 }

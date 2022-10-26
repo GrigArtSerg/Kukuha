@@ -165,6 +165,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_BA67610212A4D9AD1ACD26AC03319AC4"
+        "OwnerKey" = "8:_CA54B1A1C90C4EED9FC46DC8958E8B37"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_BEB915031BA149B3A0D2564524BCB8E6"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -195,6 +201,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_CA54B1A1C90C4EED9FC46DC8958E8B37"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_D442F18F5E96476A85FC87471D35E1AC"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -219,6 +231,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_EB7BFD6A731F0A05B3D38D8D6428FC63"
+        "OwnerKey" = "8:_CA54B1A1C90C4EED9FC46DC8958E8B37"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_EFF30A79CE9940BDA8BBAB286BF9D063"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -233,6 +251,24 @@
         {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_C907D14B61AF44CDADD47B2A85DC4114"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_CA54B1A1C90C4EED9FC46DC8958E8B37"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_EB7BFD6A731F0A05B3D38D8D6428FC63"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_BA67610212A4D9AD1ACD26AC03319AC4"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -331,6 +367,16 @@
                 "FrameworkVersion" = "8:.NETFramework,Version=v4.7.2"
                 "AllowLaterVersions" = "11:FALSE"
                 "InstallUrl" = "8:http://go.microsoft.com/fwlink/?LinkId=863262"
+                }
+                "{A06ECF26-33A3-4562-8140-9B0E340D4F24}:_DD7EB03DA96E4253A5ECFF5599F29D8D"
+                {
+                "Name" = "8:.NET Core"
+                "Message" = "8:[VSDNETCOREMSG]"
+                "AllowLaterVersions" = "11:FALSE"
+                "InstallUrl" = "8:https://dotnet.microsoft.com/download/dotnet-core/[NetCoreVerMajorDotMinor]"
+                "IsNETCore" = "11:TRUE"
+                "Architecture" = "2:0"
+                "Runtime" = "2:0"
                 }
             }
         }
@@ -847,6 +893,37 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_BA67610212A4D9AD1ACD26AC03319AC4"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:System.Net.Http, Version=4.2.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
+                "ScatterAssemblies"
+                {
+                    "_BA67610212A4D9AD1ACD26AC03319AC4"
+                    {
+                    "Name" = "8:System.Net.Http.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:System.Net.Http.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_D706E141832E43A4A39ED73040FCA950"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_BEB915031BA149B3A0D2564524BCB8E6"
             {
             "SourcePath" = "8:..\\Kukuha\\bin\\Debug\\TimeSounds\\sp17.wav"
@@ -1007,6 +1084,37 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_EB7BFD6A731F0A05B3D38D8D6428FC63"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:Kukuha, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_EB7BFD6A731F0A05B3D38D8D6428FC63"
+                    {
+                    "Name" = "8:Kukuha.exe"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:Kukuha.exe"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_D706E141832E43A4A39ED73040FCA950"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_EFF30A79CE9940BDA8BBAB286BF9D063"
             {
             "SourcePath" = "8:..\\Kukuha\\bin\\Debug\\TimeSounds\\sp14.wav"
@@ -1066,7 +1174,7 @@
             }
             "{3C67513D-01DD-4637-8A68-80971EB9504F}:_D706E141832E43A4A39ED73040FCA950"
             {
-            "DefaultLocation" = "8:[ProgramFilesFolder][Manufacturer]\\[ProductName]"
+            "DefaultLocation" = "8:[ProgramFilesFolder]\\[ProductName]"
             "Name" = "8:#1925"
             "AlwaysCreate" = "11:TRUE"
             "Condition" = "8:"
@@ -1136,15 +1244,15 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Kukuha"
-        "ProductCode" = "8:{ADF4058F-6B47-4CBF-8FB5-E1E79FA46A83}"
-        "PackageCode" = "8:{0C148A60-5849-4E84-8493-F94C285AA8C9}"
+        "ProductCode" = "8:{0D74BBC6-26F1-43EF-A35A-353972961776}"
+        "PackageCode" = "8:{BE8984A7-7094-4087-92A4-B64F581FDD4C}"
         "UpgradeCode" = "8:{1772301F-0F0F-47A7-9EE1-0778F8A4D8BB}"
         "AspNetVersion" = "8:2.0.50727.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:FALSE"
         "InstallAllUsers" = "11:FALSE"
-        "ProductVersion" = "8:1.6.0"
+        "ProductVersion" = "8:1.6.2"
         "Manufacturer" = "8:EL COMENTANTE & Adept Of Misterss Luck"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
@@ -1712,6 +1820,34 @@
             "OutputConfiguration" = "8:"
             "OutputGroupCanonicalName" = "8:Built"
             "OutputProjectGuid" = "8:{11BAD1D1-75E6-4076-81F0-4CE2B788D6A8}"
+            "ShowKeyOutput" = "11:TRUE"
+                "ExcludeFilters"
+                {
+                }
+            }
+            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_CA54B1A1C90C4EED9FC46DC8958E8B37"
+            {
+            "SourcePath" = "8:..\\KukuhaUpdater\\obj\\Release\\KukuhaUpdater.exe"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_D706E141832E43A4A39ED73040FCA950"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            "ProjectOutputGroupRegister" = "3:1"
+            "OutputConfiguration" = "8:"
+            "OutputGroupCanonicalName" = "8:Built"
+            "OutputProjectGuid" = "8:{4A17D03F-026E-4740-8486-EDE07B012698}"
             "ShowKeyOutput" = "11:TRUE"
                 "ExcludeFilters"
                 {

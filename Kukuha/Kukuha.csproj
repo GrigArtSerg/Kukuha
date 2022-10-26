@@ -23,7 +23,7 @@
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>5</ApplicationRevision>
-    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <ApplicationVersion>1.6.2.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
@@ -79,12 +79,6 @@
     <Compile Include="Updation.Designer.cs">
       <DependentUpon>Updation.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormRepSug.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormRepSug.Designer.cs">
-      <DependentUpon>FormRepSug.cs</DependentUpon>
-    </Compile>
     <Compile Include="Settings.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -107,9 +101,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Updation.resx">
       <DependentUpon>Updation.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormRepSug.resx">
-      <DependentUpon>FormRepSug.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Settings.resx">
       <DependentUpon>Settings.cs</DependentUpon>
