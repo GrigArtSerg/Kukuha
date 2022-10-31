@@ -15,7 +15,7 @@ namespace Kukuha
         /// <summary>
         /// номер версии приложения
         /// </summary>
-        readonly Version version = new Version("1.6.3");
+        readonly Version version = new Version("1.6.4");
 
         /// <summary>
         /// получение версии приложения

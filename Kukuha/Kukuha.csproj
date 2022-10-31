@@ -25,7 +25,7 @@
     <UpdateUrl>https://disk.yandex.ru/d/OSjaORWMyr4YDA/</UpdateUrl>
     <AutorunEnabled>true</AutorunEnabled>
     <ApplicationRevision>7</ApplicationRevision>
-    <ApplicationVersion>1.6.2.%2a</ApplicationVersion>
+    <ApplicationVersion>1.6.4.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
