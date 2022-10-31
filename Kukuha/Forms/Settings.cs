@@ -9,7 +9,7 @@ namespace Kukuha
     public partial class Settings : Form
     {
 
-        string AutoRunPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), @"Microsoft\Windows\Start Menu\Programs\Startup\Kukuha.lnk");
+        readonly string AutoRunPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), @"Microsoft\Windows\Start Menu\Programs\Startup\Kukuha.lnk");
 
         public Settings()
         {
@@ -27,11 +27,13 @@ namespace Kukuha
         {
             Kukuha Main = this.Owner as Kukuha;
 
-            OpenFileDialog AddSound = new OpenFileDialog();
-            AddSound.Multiselect = false;
-            AddSound.Title = "Добавление фраз для уведомлений";
-            AddSound.Filter = "Audio files(*.mp3, *.wav, *.aac, *.flac, *.wav, *.ogg)|*.mp3;*.wav;*.aac;*.flac;*.wav;*.ogg|All files(*.*)|*.*";
-            
+            OpenFileDialog AddSound = new OpenFileDialog
+            {
+                Multiselect = false,
+                Title = "Добавление фраз для уведомлений",
+                Filter = "Audio files(*.mp3, *.wav, *.aac, *.flac, *.wav, *.ogg)|*.mp3;*.wav;*.aac;*.flac;*.wav;*.ogg|All files(*.*)|*.*"
+            };
+
             if (AddSound.ShowDialog() == DialogResult.Cancel)
                 return;
         
@@ -77,11 +79,9 @@ namespace Kukuha
         /// <param name="e"></param>
         private void ReportOrSuggestion_Click(object sender, EventArgs e)
         {
-            /*
-            FormRepSug FormRepSug = new FormRepSug();
+            Mail FormRepSug = new Mail();
             FormRepSug.Owner = this;
             FormRepSug.ShowDialog();
-            */
         }
     }
 }

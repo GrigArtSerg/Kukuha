@@ -13,10 +13,13 @@ namespace Kukuha
     public partial class Kukuha : Form
     {
         /// <summary>
-        /// номер версии
+        /// номер версии приложения
         /// </summary>
-        readonly Version version = new Version("1.6.2");
+        readonly Version version = new Version("1.6.3");
 
+        /// <summary>
+        /// получение версии приложения
+        /// </summary>
         public Version GetVersion
         {
             get
@@ -26,10 +29,13 @@ namespace Kukuha
         }
 
         /// <summary>
-        /// путь к версии
+        /// онлайн адреса версии
         /// </summary>
         readonly string VersionPath = "https://pastebin.com/abrDfmwL";
 
+        /// <summary>
+        /// получение адреса версии
+        /// </summary>
         public string GetVersionPath
         {
             get
@@ -38,24 +44,39 @@ namespace Kukuha
             }
         }
 
-        //путь к саундам
+        /// <summary>
+        /// путь к звукам времени
+        /// </summary>
         public readonly string timeMainPath = Directory.GetCurrentDirectory() + @"\TimeSounds\sp";
+        /// <summary>
+        /// путь к дополнительным звукам
+        /// </summary>
         public readonly string randomMainPath = Directory.GetCurrentDirectory() + @"\RandomSounds\sp";
 
-        //таймер типо
+        /// <summary>
+        /// таймер
+        /// </summary>
         readonly System.Windows.Forms.Timer timer01 = new System.Windows.Forms.Timer();
         
-        //Рандомазер
+        /// <summary>
+        /// рандомайзер
+        /// </summary>
         readonly Random rnd = new Random();
 
-        //звук рандомный
-        readonly SoundPlayer sayRandom = new SoundPlayer();
-
-        //звук таймера
+        /// <summary>
+        /// проигрыватель звука времени
+        /// </summary>
         readonly SoundPlayer sayTime = new SoundPlayer();
 
-        //для обновления
-        WebClient Client = new WebClient();
+        /// <summary>
+        /// проигрыватель дополнительного звука
+        /// </summary>
+        readonly SoundPlayer sayRandom = new SoundPlayer();
+
+        /// <summary>
+        /// веб-улиент для обновления
+        /// </summary>
+        readonly WebClient Client = new WebClient();
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -69,12 +90,14 @@ namespace Kukuha
         }
 
         /// <summary>
-        /// 
+        /// Проверка наличия обновлений
         /// </summary>
         private void UpdateCheck()
         {
             if (!Client.DownloadString(VersionPath).Contains(version.ToString()))
             {
+                MessageBox.Show("Обнаружена новая версия Kukuha","Kukuha обновилась" );
+
                 Updation Upd = new Updation();
                 Upd.ShowDialog();
             }
@@ -100,7 +123,10 @@ namespace Kukuha
             }
         }
 
-        //Воспроизводим время
+        /// <summary>
+        /// Воспроизведение времени
+        /// </summary>
+        /// <param name="hoursNow">воспроизведение времени</param>
         public void PlayTheTime(string hoursNow)
         {
             
@@ -127,7 +153,9 @@ namespace Kukuha
 
         }
 
-        //Добавляем немного рандома
+        /// <summary>
+        /// воспроизведение дополнительного звука
+        /// </summary>
         public void PlayTheRandomAction() /*actionNow Надо юзать как ориентир для фраз или нахер?*/
         {
             int error = 0;
@@ -156,6 +184,9 @@ namespace Kukuha
             }
         }
 
+        /// <summary>
+        /// загрузка 
+        /// </summary>
         public Kukuha()
         {
             InitializeComponent();
@@ -168,16 +199,16 @@ namespace Kukuha
         #region Кнопачке
         private void TestButton_Click(object sender, EventArgs e)
         {
-            Test Test = new Test();
-            Test.Owner = this;
-            Test.ShowDialog();
+            Test test = new Test();
+            test.Owner = this;
+            test.ShowDialog();
         }
 
         private void SettingButton_Click(object sender, EventArgs e)
         {
-            Settings Settings = new Settings();
-            Settings.Owner = this;
-            Settings.ShowDialog();
+            Settings settings = new Settings();
+            settings.Owner = this;
+            settings.ShowDialog();
         }
         #endregion
     }

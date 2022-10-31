@@ -2,8 +2,8 @@
 using System.IO;
 using System.Net;
 using System.Diagnostics;
-using System.Threading;
-using Kukuha;
+using System.Security;
+using System.Security.Permissions;
 
 namespace KukuhaUpdater
 {
@@ -25,7 +25,7 @@ namespace KukuhaUpdater
             {
                 if (Process.GetProcessesByName("Kukuha.exe").Length > 0)
                 {
-                    Replase(client, AppPath);
+                    Replase(client, AppPath, kukuha);
                 }
                 else
                 {
@@ -35,20 +35,32 @@ namespace KukuhaUpdater
                         process.Kill();
                     }
 
-                    Replase(client, AppPath);
+                    Replase(client, AppPath, kukuha);
                 }
             }
         }
 
-        private static void Replase(WebClient client, string AppPath)
+        private static void Replase(WebClient client, string AppPath, Kukuha.Kukuha kukuha)
         {
             client.DownloadFile("https://disk.yandex.ru/d/MKL7fZtgo456Ng", "KukuhaNew.exe");
             Inform("Скачали файл");
 
             Console.WriteLine(AppPath);
-            Console.WriteLine(File.Exists(AppPath));
+            Console.WriteLine($"IsFileExist = {File.Exists(AppPath)}");
 
-            File.Delete(AppPath);
+            FileIOPermission f2 = new FileIOPermission(FileIOPermissionAccess.Write, Directory.GetCurrentDirectory());
+            f2.AllLocalFiles = FileIOPermissionAccess.Write;
+            try
+            {
+                f2.Demand();
+                f2.Assert();
+            }
+            catch (SecurityException s)
+            {
+                Console.WriteLine(s.Message);
+            }
+            Directory.CreateDirectory(Directory.GetCurrentDirectory() + @"\OldVerions");
+            File.Move(AppPath, Directory.GetCurrentDirectory() + $@"\OldVerions\KukuhaV{kukuha.GetVersion}.exe");
             Inform("Удалили старый exe");
 
             File.Copy("KukuhaNew.exe", "Kukuha.exe");

@@ -44,7 +44,7 @@
             this.label1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 58F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(12, 9);
+            this.label1.Location = new System.Drawing.Point(6, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(232, 89);
             this.label1.TabIndex = 0;
@@ -54,7 +54,7 @@
             // TestButton
             // 
             this.TestButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.TestButton.Location = new System.Drawing.Point(13, 100);
+            this.TestButton.Location = new System.Drawing.Point(12, 100);
             this.TestButton.Name = "TestButton";
             this.TestButton.Size = new System.Drawing.Size(100, 39);
             this.TestButton.TabIndex = 4;
@@ -65,7 +65,7 @@
             // SettingButton
             // 
             this.SettingButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.SettingButton.Location = new System.Drawing.Point(130, 100);
+            this.SettingButton.Location = new System.Drawing.Point(132, 100);
             this.SettingButton.Name = "SettingButton";
             this.SettingButton.Size = new System.Drawing.Size(100, 39);
             this.SettingButton.TabIndex = 5;
