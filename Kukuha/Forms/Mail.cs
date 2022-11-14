@@ -8,16 +8,7 @@ namespace Kukuha
 {
     public partial class Mail : Form
     {
-        /// <summary>
-        /// Адрес почты приложения
-        /// </summary>
-        string MailAddress = "KukuhaApp@yandex.ru";
-        
-        /// <summary>
-        /// Пароль почты отправления
-        /// </summary>
-        string MailPassword = "wixteivkzuiemtqm";
-
+        // TODO Добавить поле для ввода почты на которую прислать ответ
         public Mail()
         {
             InitializeComponent();
@@ -27,8 +18,8 @@ namespace Kukuha
         {
             MimeMessage Message = new MimeMessage();
 
-            Message.From.Add(new MailboxAddress("KukuhaApp", MailAddress));
-            Message.To.Add(MailboxAddress.Parse(MailAddress));
+            Message.From.Add(new MailboxAddress("KukuhaApp", Properties.Settings.Default.MailAddress));
+            Message.To.Add(MailboxAddress.Parse(Properties.Settings.Default.MailAddress));
 
             Message.Subject = SubjectText.Text;
 
@@ -42,7 +33,7 @@ namespace Kukuha
             try
             {
                 Client.Connect("smtp.yandex.ru", 465, true);
-                Client.Authenticate(MailAddress, MailPassword);
+                Client.Authenticate(Properties.Settings.Default.MailAddress, Properties.Settings.Default.MailPassword);
                 Client.Send(Message);
 
                 MessageBox.Show("Сообщение отправлено!", "Отправка сообщения");
