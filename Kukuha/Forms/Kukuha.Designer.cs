@@ -28,11 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Kukuha));
             this.label1 = new System.Windows.Forms.Label();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.TestButton = new System.Windows.Forms.Button();
             this.SettingButton = new System.Windows.Forms.Button();
             this.Version = new System.Windows.Forms.Label();
@@ -47,21 +44,17 @@
             this.label1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 58F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(12, 9);
+            this.label1.Location = new System.Drawing.Point(6, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(232, 89);
             this.label1.TabIndex = 0;
             this.label1.Text = "00:00";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // timer1
-            // 
-            this.timer1.Tick += new System.EventHandler(this.Timer1_Tick);
-            // 
             // TestButton
             // 
             this.TestButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.TestButton.Location = new System.Drawing.Point(13, 100);
+            this.TestButton.Location = new System.Drawing.Point(12, 100);
             this.TestButton.Name = "TestButton";
             this.TestButton.Size = new System.Drawing.Size(100, 39);
             this.TestButton.TabIndex = 4;
@@ -72,7 +65,7 @@
             // SettingButton
             // 
             this.SettingButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.SettingButton.Location = new System.Drawing.Point(130, 100);
+            this.SettingButton.Location = new System.Drawing.Point(132, 100);
             this.SettingButton.Name = "SettingButton";
             this.SettingButton.Size = new System.Drawing.Size(100, 39);
             this.SettingButton.TabIndex = 5;
@@ -87,8 +80,9 @@
             this.Version.ForeColor = System.Drawing.Color.White;
             this.Version.Location = new System.Drawing.Point(12, 142);
             this.Version.Name = "Version";
-            this.Version.Size = new System.Drawing.Size(0, 13);
+            this.Version.Size = new System.Drawing.Size(13, 13);
             this.Version.TabIndex = 6;
+            this.Version.Text = "v";
             // 
             // Kukuha
             // 
@@ -114,8 +108,6 @@
         #endregion
 
         public System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Timer timer1;
-        private System.Windows.Forms.Timer timer2;
         private System.Windows.Forms.Button TestButton;
         private System.Windows.Forms.Button SettingButton;
         private System.Windows.Forms.Label Version;

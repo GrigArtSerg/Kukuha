@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Drawing;
-using System.Windows.Forms;
 using System.IO;
+using System.Windows.Forms;
 
 namespace Kukuha
 {
@@ -21,13 +21,12 @@ namespace Kukuha
             string tempText = Main.label1.Text;
 
             tempText = tempText.Substring(0, tempText.Length - 3);
-            Main.PlayTheTime(tempText);
+            Staff.PlayTheTime(tempText);
         }
 
         private void TestRandomBtn_Click(object sender, EventArgs e)
         {
-            Kukuha Main = this.Owner as Kukuha;
-            Main.PlayTheRandomAction();
+            Staff.PlayTheRandomAction();
         }
         #endregion
     }
