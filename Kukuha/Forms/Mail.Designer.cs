@@ -33,6 +33,7 @@ namespace Kukuha
             this.MessageText = new System.Windows.Forms.RichTextBox();
             this.SendButton = new System.Windows.Forms.Button();
             this.SubjectText = new System.Windows.Forms.TextBox();
+            this.SendBackMail = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // MessageText
@@ -68,12 +69,24 @@ namespace Kukuha
             this.SubjectText.TabIndex = 3;
             this.SubjectText.Text = "Тема письма";
             // 
+            // SendBackMail
+            // 
+            this.SendBackMail.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.SendBackMail.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.SendBackMail.ForeColor = System.Drawing.Color.White;
+            this.SendBackMail.Location = new System.Drawing.Point(13, 413);
+            this.SendBackMail.Name = "SendBackMail";
+            this.SendBackMail.Size = new System.Drawing.Size(662, 23);
+            this.SendBackMail.TabIndex = 3;
+            this.SendBackMail.Text = "Ваша почта, если вам нужна обратная связь";
+            // 
             // Mail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.SendBackMail);
             this.Controls.Add(this.SubjectText);
             this.Controls.Add(this.SendButton);
             this.Controls.Add(this.MessageText);
@@ -91,5 +104,6 @@ namespace Kukuha
         private System.Windows.Forms.RichTextBox MessageText;
         private System.Windows.Forms.Button SendButton;
         private System.Windows.Forms.TextBox SubjectText;
+        private System.Windows.Forms.TextBox SendBackMail;
     }
 }

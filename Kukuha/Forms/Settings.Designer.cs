@@ -35,6 +35,12 @@ namespace Kukuha
             this.IsUpdateCheck = new System.Windows.Forms.CheckBox();
             this.VoiceChange = new System.Windows.Forms.ComboBox();
             this.IsHideOnLoad = new System.Windows.Forms.CheckBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
             // IsAutoRun
@@ -53,7 +59,7 @@ namespace Kukuha
             // AddPhrase
             // 
             this.AddPhrase.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.AddPhrase.Location = new System.Drawing.Point(12, 226);
+            this.AddPhrase.Location = new System.Drawing.Point(12, 163);
             this.AddPhrase.Name = "AddPhrase";
             this.AddPhrase.Size = new System.Drawing.Size(269, 39);
             this.AddPhrase.TabIndex = 5;
@@ -64,7 +70,7 @@ namespace Kukuha
             // ReportOrSuggestion
             // 
             this.ReportOrSuggestion.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.ReportOrSuggestion.Location = new System.Drawing.Point(12, 271);
+            this.ReportOrSuggestion.Location = new System.Drawing.Point(12, 208);
             this.ReportOrSuggestion.Name = "ReportOrSuggestion";
             this.ReportOrSuggestion.Size = new System.Drawing.Size(269, 69);
             this.ReportOrSuggestion.TabIndex = 6;
@@ -96,9 +102,9 @@ namespace Kukuha
             this.VoiceChange.Items.AddRange(new object[] {
             "Оригинальная озвучка (Гугл-дядя)",
             "Голос Артаса"});
-            this.VoiceChange.Location = new System.Drawing.Point(12, 187);
+            this.VoiceChange.Location = new System.Drawing.Point(13, 124);
             this.VoiceChange.Name = "VoiceChange";
-            this.VoiceChange.Size = new System.Drawing.Size(269, 33);
+            this.VoiceChange.Size = new System.Drawing.Size(268, 33);
             this.VoiceChange.TabIndex = 8;
             this.VoiceChange.SelectedIndexChanged += new System.EventHandler(this.VoiceChange_SelectedIndexChanged);
             // 
@@ -117,12 +123,42 @@ namespace Kukuha
             this.IsHideOnLoad.UseVisualStyleBackColor = true;
             this.IsHideOnLoad.CheckedChanged += new System.EventHandler(this.IsHideOnLoad_CheckedChanged);
             // 
+            // pictureBox5
+            // 
+            this.pictureBox5.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.pictureBox5.Location = new System.Drawing.Point(13, 283);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(43, 43);
+            this.pictureBox5.TabIndex = 9;
+            this.pictureBox5.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.pictureBox2.Location = new System.Drawing.Point(125, 283);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(43, 43);
+            this.pictureBox2.TabIndex = 9;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.pictureBox4.Location = new System.Drawing.Point(237, 283);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(43, 43);
+            this.pictureBox4.TabIndex = 9;
+            this.pictureBox4.TabStop = false;
+            // 
             // Settings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ClientSize = new System.Drawing.Size(295, 357);
+            this.ClientSize = new System.Drawing.Size(295, 339);
+            this.Controls.Add(this.pictureBox4);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.VoiceChange);
             this.Controls.Add(this.IsHideOnLoad);
             this.Controls.Add(this.IsUpdateCheck);
@@ -132,6 +168,9 @@ namespace Kukuha
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Settings";
             this.Text = "Kukuha Settings";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -145,5 +184,8 @@ namespace Kukuha
         private System.Windows.Forms.CheckBox IsUpdateCheck;
         private System.Windows.Forms.ComboBox VoiceChange;
         private System.Windows.Forms.CheckBox IsHideOnLoad;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox4;
     }
 }

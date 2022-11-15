@@ -1,11 +1,13 @@
 ﻿using System;
-using System.IO;
+using System.Net;
+using System.Windows.Forms;
+using System.Media;
 
 namespace Kukuha
 {
     class Staff
     {
-        public int GetVoiceFromSettings(string voice)
+        static public int GetVoiceFromSettings(string voice)
         {
             switch (voice)
             {
@@ -17,7 +19,7 @@ namespace Kukuha
 
         }
 
-        public  string SetVoiceToSettings(int selectedIndex)
+        static public string SetVoiceToSettings(int selectedIndex)
         {
             switch (selectedIndex)
             {
@@ -27,61 +29,82 @@ namespace Kukuha
                     return "RandomSoundsMaximBot";
             }
         }
-    }
-    
-    class VersionControl
-    {
-        /// <summary>
-        /// номер версии приложения
-        /// </summary>
-        public readonly Version version = new Version("1.6.5");
 
         /// <summary>
-        /// получение версии приложения
+        /// Проверка наличия обновлений
         /// </summary>
-        public Version GetVersion
+        static public void UpdateCheck()
         {
-            get
+            WebClient Client = new WebClient();
+
+            if (!Client.DownloadString(VersionControl.VersionPath).Contains(VersionControl.version.ToString()))
             {
-                return version;
+                MessageBox.Show("Обнаружена новая версия Kukuha", "Kukuha обновилась");
+
+                Updation Upd = new Updation();
+                Upd.ShowDialog();
             }
         }
 
         /// <summary>
-        /// онлайн адреса версии
+        /// воспроизведение дополнительного звука
         /// </summary>
-        public readonly string VersionPath = "https://pastebin.com/abrDfmwL";
-
-        /// <summary>
-        /// получение адреса версии
-        /// </summary>
-        public string GetVersionPath
+        static public void PlayTheRandomAction() /*actionNow Надо юзать как ориентир для фраз или нахер?*/
         {
-            get
+            int filesNumber = System.IO.Directory.GetFiles(Paths.randomMainPath[0].Substring(0, Paths.randomMainPath[0].Length - 3)).Length; // количество файлов в папке. путь минус последние три символа - путь к папке
+
+            Random rnd = new Random();
+
+            SoundPlayer sayRandom = new SoundPlayer();
+
+            string numOfFile = rnd.Next(filesNumber).ToString("00"); /*рандом из количества файлов*/
+
+            string path = Paths.randomMainPath[0] + "d" + numOfFile + ".wav";
+
+            //fixme
+            Console.WriteLine($"{numOfFile} of {filesNumber} at {path}");
+
+            sayRandom.SoundLocation = path;
+            try
             {
-                return VersionPath;
+                sayRandom.Play();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
             }
         }
-    }
-
-    class Paths
-    {
-        /// <summary>
-        /// путь к звукам времени
-        /// </summary>
-        public readonly string timeMainPath = Directory.GetCurrentDirectory() + @"\TimeSounds\sp";
 
         /// <summary>
-        /// путь к дополнительным звукам
+        /// Воспроизведение времени
         /// </summary>
-        // NOTE поменять каталоги
-        public string[] randomMainPath = new string[2];
-
-        public Paths()
+        /// <param name="hoursNow">воспроизведение времени</param>
+        static public void PlayTheTime(string hoursNow)
         {
-            randomMainPath[0] = Directory.GetCurrentDirectory() + @"\RandomSoundsGoogleMan\sp";
-            randomMainPath[1] = Directory.GetCurrentDirectory() + @"\RandomSoundsArthas\sp";
+            SoundPlayer sayTime = new SoundPlayer();
+
+            string path = Paths.timeMainPath + hoursNow + ".wav";
+
+            if (Int32.Parse(hoursNow) >= 48)
+            {
+
+                int hh = Int32.Parse(hoursNow) - 48;
+                hoursNow = hh.ToString("00");
+                path = Paths.timeMainPath + hoursNow + ".wav";
+
+            }
+            else if (Int32.Parse(hoursNow) >= 24)
+            {
+
+                int hh = Int32.Parse(hoursNow) - 24;
+                hoursNow = hh.ToString("00");
+                path = Paths.timeMainPath + hoursNow + ".wav";
+
+            }
+
+            sayTime.SoundLocation = path;
+            sayTime.Play();
+
         }
-                                                      
     }
 }

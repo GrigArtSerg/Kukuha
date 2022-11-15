@@ -1,8 +1,8 @@
-﻿using System;
-using System.IO;
+﻿using IWshRuntimeLibrary;
+using System;
 using System.Drawing;
+using System.IO;
 using System.Windows.Forms;
-using IWshRuntimeLibrary;
 
 namespace Kukuha
 {
@@ -99,7 +99,6 @@ namespace Kukuha
         /// <param name="e"></param>
         private void IsHideOnLoad_CheckedChanged(object sender, EventArgs e)
         {
-            Kukuha Main = this.Owner as Kukuha;
             if (IsHideOnLoad.Checked)
             {
                 Properties.Settings.Default.IsHideOnStart = FormWindowState.Minimized;
@@ -143,8 +142,8 @@ namespace Kukuha
                 return;
 
             // количество файлов в папке. путь минус последние три символа - путь к папке
-            int filesNumber = System.IO.Directory.GetFiles(paths.randomMainPath[0].Substring(0, paths.randomMainPath[0].Length - 3)).Length;
-            string path = paths.randomMainPath[Voice] + "d" + filesNumber.ToString("00") + Path.GetExtension(AddSound.FileName);
+            int filesNumber = System.IO.Directory.GetFiles(Paths.randomMainPath[Voice].Substring(0, Paths.randomMainPath[Voice].Length - 3)).Length;
+            string path = Paths.randomMainPath[Voice] + "d" + filesNumber.ToString("00") + Path.GetExtension(AddSound.FileName);
             System.IO.File.Copy(AddSound.FileName, path);
 
             AddSound.RestoreDirectory = true;

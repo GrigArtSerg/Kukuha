@@ -1,14 +1,12 @@
-﻿using System;
-using MailKit;
-using MailKit.Net.Smtp;
+﻿using MailKit.Net.Smtp;
 using MimeKit;
+using System;
 using System.Windows.Forms;
 
 namespace Kukuha
 {
     public partial class Mail : Form
     {
-        // TODO Добавить поле для ввода почты на которую прислать ответ
         public Mail()
         {
             InitializeComponent();
@@ -16,6 +14,7 @@ namespace Kukuha
 
         private void SendButton_Click(object sender, EventArgs e)
         {
+            if (SendBackMail.Text == "Ваша почта, если вам нужна обратная связь") SendBackMail.Text = " ";
             MimeMessage Message = new MimeMessage();
 
             Message.From.Add(new MailboxAddress("KukuhaApp", Properties.Settings.Default.MailAddress));
@@ -25,7 +24,7 @@ namespace Kukuha
 
             Message.Body = new TextPart("plain")
             {
-                Text = MessageText.Text,
+                Text = MessageText.Text + "\n Mail: " + SendBackMail.Text,
             };
 
             SmtpClient Client = new SmtpClient();

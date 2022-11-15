@@ -111,6 +111,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Paths.cs" />
+    <Compile Include="VersionControl.cs" />
     <Compile Include="Forms\Mail.cs">
       <SubType>Form</SubType>
     </Compile>
